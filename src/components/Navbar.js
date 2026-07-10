@@ -98,71 +98,67 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile slide-in menu */}
+      {/* Mobile full-screen menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-navy/50 backdrop-blur-sm md:hidden"
-            onClick={() => setOpen(false)}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
+            style={{ height: "100dvh" }}
+            className="fixed inset-0 z-[100] flex w-full flex-col bg-white md:hidden"
           >
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 flex h-full w-72 max-w-[80%] flex-col bg-white p-6 shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Menu header: logo + close */}
-              <div className="mb-8 flex items-center justify-between">
-                <Image
-                  src="/logo.png"
-                  alt="R.K Trading"
-                  width={90}
-                  height={90}
-                  className="h-12 w-auto object-contain"
-                />
-                <button
-                  onClick={() => setOpen(false)}
-                  className="text-navy"
-                  aria-label="Close menu"
+            {/* Header: logo + close */}
+            <div className="flex items-center justify-between border-b border-navy/10 px-6 py-4">
+              <Image
+                src="/logo.png"
+                alt="R.K Trading"
+                width={100}
+                height={100}
+                className="h-12 w-auto object-contain"
+              />
+              <button
+                onClick={() => setOpen(false)}
+                className="text-navy"
+                aria-label="Close menu"
+              >
+                <X size={30} />
+              </button>
+            </div>
+
+            {/* Links */}
+            <div className="flex flex-1 flex-col justify-center gap-8 px-8">
+              {links.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.08 + i * 0.06 }}
                 >
-                  <X size={28} />
-                </button>
-              </div>
-
-              <ul className="flex flex-col gap-6">
-                {links.map((link, i) => (
-                  <motion.li
-                    key={link.name}
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + i * 0.07 }}
+                  <Link
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className={`font-display text-3xl font-bold ${
+                      pathname === link.href ? "text-royal" : "text-navy"
+                    }`}
                   >
-                    <Link
-                      href={link.href}
-                      onClick={() => setOpen(false)}
-                      className={`font-display text-xl font-bold ${
-                        pathname === link.href ? "text-royal" : "text-navy"
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
 
+            {/* CTA */}
+            <div className="px-8 pb-10">
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-auto rounded-full bg-royal px-5 py-3 text-center font-body font-semibold text-white"
+                className="block rounded-full bg-royal px-6 py-4 text-center font-body text-base font-semibold text-white shadow-lg shadow-royal/30"
               >
                 Get a Quote
               </Link>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
