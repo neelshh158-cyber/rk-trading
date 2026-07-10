@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Droplet, ArrowUpRight } from "lucide-react";
 
 export default function ProductCard({ product, index }) {
+  const hasPhoto = product.image?.startsWith("http");
+
   return (
     <motion.div
       layout
@@ -15,19 +18,32 @@ export default function ProductCard({ product, index }) {
       className="group overflow-hidden rounded-2xl border border-navy/5 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-navy/10"
     >
       <Link href={`/products/${product.slug}`}>
-        {/* Image / placeholder panel — swap for real photo later */}
+        {/* Image panel */}
         <div className="relative flex h-52 items-center justify-center overflow-hidden bg-gradient-to-br from-ice via-white to-sky/15">
-          <Droplet
-            className="absolute -right-4 -top-4 text-royal/5 transition-transform duration-500 group-hover:scale-125"
-            size={140}
-            strokeWidth={1}
-          />
-          <span className="absolute left-4 top-4 rounded-full bg-royal px-3 py-1 font-body text-[11px] font-semibold text-white shadow">
+          <span className="absolute left-4 top-4 z-10 rounded-full bg-royal px-3 py-1 font-body text-[11px] font-semibold text-white shadow">
             {product.purification}
           </span>
-          <span className="font-display text-2xl font-extrabold text-navy/25 transition-transform duration-500 group-hover:scale-110">
-            {product.name}
-          </span>
+
+          {hasPhoto ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <>
+              <Droplet
+                className="absolute -right-4 -top-4 text-royal/5 transition-transform duration-500 group-hover:scale-125"
+                size={140}
+                strokeWidth={1}
+              />
+              <span className="font-display text-2xl font-extrabold text-navy/25 transition-transform duration-500 group-hover:scale-110">
+                {product.name}
+              </span>
+            </>
+          )}
         </div>
 
         {/* Body */}

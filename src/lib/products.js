@@ -12,7 +12,7 @@ export const products = [
     tagline: "Advanced RO + UV Purification with Active Copper & Alkaline Technology",
     category: "ro",
     purification: "RO + UV",
-    image: "/products/swaraj.png",
+   image: "https://www.image2url.com/r2/default/images/1783697419226-cc326514-ae45-48c7-9ef5-673354b13c2d.png",
     description:
       "The B.Nova Swaraj combines advanced RO and UV purification with Active Copper and Alkaline Technology to deliver clean, safe, and refreshing drinking water. Designed for homes using municipal, borewell, tanker, or well water, it offers reliable performance, low maintenance, and everyday convenience.",
     features: ["RO + UV Purification", "Active Copper Technology", "Alkaline Enhancement", "Smart Mineral Retention", "Fully Automatic", "Low Maintenance Design"],
