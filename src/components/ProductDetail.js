@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Droplet, Check, ArrowLeft, ArrowUpRight,
@@ -37,26 +38,42 @@ export default function ProductDetail({ product, related }) {
 
       {/* Hero split */}
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-10 md:grid-cols-2 md:px-8 md:py-14">
+        {/* Visual */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="relative flex h-96 items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-ice via-white to-sky/20 shadow-xl shadow-navy/5"
         >
-          <motion.div
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <Droplet className="text-royal/10" size={260} strokeWidth={1} />
-          </motion.div>
-          <span className="absolute font-display text-3xl font-extrabold text-navy/30">
-            {product.name}
-          </span>
-          <span className="absolute left-5 top-5 rounded-full bg-royal px-4 py-1.5 font-body text-xs font-semibold text-white shadow-lg">
+          <span className="absolute left-5 top-5 z-10 rounded-full bg-royal px-4 py-1.5 font-body text-xs font-semibold text-white shadow-lg">
             {product.purification}
           </span>
+
+          {product.image?.startsWith("http") ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain p-8"
+              priority
+            />
+          ) : (
+            <>
+              <motion.div
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <Droplet className="text-royal/10" size={260} strokeWidth={1} />
+              </motion.div>
+              <span className="absolute font-display text-3xl font-extrabold text-navy/30">
+                {product.name}
+              </span>
+            </>
+          )}
         </motion.div>
 
+        {/* Info */}
         <div>
           <motion.span
             variants={fadeUp} initial="hidden" animate="show"
@@ -172,9 +189,15 @@ export default function ProductDetail({ product, related }) {
                     href={`/products/${r.slug}`}
                     className="group block overflow-hidden rounded-2xl border border-navy/5 bg-white shadow-sm transition-all hover:-translate-y-2 hover:shadow-xl hover:shadow-navy/10"
                   >
-                    <div className="relative flex h-40 items-center justify-center bg-gradient-to-br from-ice via-white to-sky/15">
-                      <Droplet className="absolute text-royal/5" size={120} strokeWidth={1} />
-                      <span className="font-display text-xl font-extrabold text-navy/25">{r.name}</span>
+                    <div className="relative flex h-40 items-center justify-center overflow-hidden bg-gradient-to-br from-ice via-white to-sky/15">
+                      {r.image?.startsWith("http") ? (
+                        <Image src={r.image} alt={r.name} fill sizes="33vw" className="object-contain p-4" />
+                      ) : (
+                        <>
+                          <Droplet className="absolute text-royal/5" size={120} strokeWidth={1} />
+                          <span className="font-display text-xl font-extrabold text-navy/25">{r.name}</span>
+                        </>
+                      )}
                     </div>
                     <div className="p-5">
                       <h3 className="font-display text-base font-bold text-navy">{r.name}</h3>
