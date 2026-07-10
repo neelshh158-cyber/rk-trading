@@ -26,6 +26,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll while the mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -97,7 +105,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-navy/40 backdrop-blur-sm md:hidden"
+            className="fixed inset-0 z-[60] bg-navy/50 backdrop-blur-sm md:hidden"
             onClick={() => setOpen(false)}
           >
             <motion.div
@@ -105,16 +113,27 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 flex h-full w-72 flex-col bg-white p-6 shadow-2xl"
+              className="absolute right-0 top-0 flex h-full w-72 max-w-[80%] flex-col bg-white p-6 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                onClick={() => setOpen(false)}
-                className="mb-8 self-end text-navy"
-                aria-label="Close menu"
-              >
-                <X size={28} />
-              </button>
+              {/* Menu header: logo + close */}
+              <div className="mb-8 flex items-center justify-between">
+                <Image
+                  src="/logo.png"
+                  alt="R.K Trading"
+                  width={90}
+                  height={90}
+                  className="h-12 w-auto object-contain"
+                />
+                <button
+                  onClick={() => setOpen(false)}
+                  className="text-navy"
+                  aria-label="Close menu"
+                >
+                  <X size={28} />
+                </button>
+              </div>
+
               <ul className="flex flex-col gap-6">
                 {links.map((link, i) => (
                   <motion.li
@@ -135,6 +154,7 @@ export default function Navbar() {
                   </motion.li>
                 ))}
               </ul>
+
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
