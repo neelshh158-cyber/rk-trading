@@ -12,7 +12,7 @@ export const products = [
     tagline: "Advanced RO + UV Purification with Active Copper & Alkaline Technology",
     category: "ro",
     purification: "RO + UV",
-   image: "https://www.image2url.com/r2/default/images/1783697419226-cc326514-ae45-48c7-9ef5-673354b13c2d.png",
+    image: "https://www.image2url.com/r2/default/images/1783697419226-cc326514-ae45-48c7-9ef5-673354b13c2d.png",
     description:
       "The B.Nova Swaraj combines advanced RO and UV purification with Active Copper and Alkaline Technology to deliver clean, safe, and refreshing drinking water. Designed for homes using municipal, borewell, tanker, or well water, it offers reliable performance, low maintenance, and everyday convenience.",
     features: ["RO + UV Purification", "Active Copper Technology", "Alkaline Enhancement", "Smart Mineral Retention", "Fully Automatic", "Low Maintenance Design"],
@@ -23,7 +23,7 @@ export const products = [
     tagline: "Compact Design. Complete Water Protection.",
     category: "ro",
     purification: "RO + UF + UV",
-    image: "/products/compact.png",
+    image: "https://www.image2url.com/r2/default/images/1783698107771-3860c8ea-5fbf-4132-b56a-8c69f9f0c727.png",
     description:
       "Designed for modern kitchens, the B.Nova Compact combines RO, UF, and UV purification with Active Copper and Alkaline Technology. Its compact design delivers powerful purification without compromising on performance.",
     features: ["RO + UF + UV", "Compact Design", "Active Copper", "Alkaline Technology", "Multi-Stage Filtration", "Self Maintenance"],
@@ -34,7 +34,7 @@ export const products = [
     tagline: "Elegant Design with Powerful Purification.",
     category: "ro",
     purification: "RO + UV",
-    image: "/products/cute.png",
+    image: "https://www.image2url.com/r2/default/images/1783698175861-da83442b-e180-4cf7-a581-4fbf65a2aa23.png",
     description:
       "B.Nova Cute combines advanced RO and UV purification with Active Copper and Alkaline Technology in a stylish transparent body. It delivers safe, healthy, and great-tasting water while enhancing the look of your kitchen.",
     features: ["RO + UV", "Elegant Transparent Body", "Alkaline Water", "Active Copper", "Self Maintenance", "Mineral Retention"],
@@ -45,7 +45,7 @@ export const products = [
     tagline: "Intelligent Multi-Stage Water Purification.",
     category: "ro",
     purification: "RO + UF + UV",
-    image: "/products/intelligent.png",
+    image: "https://www.image2url.com/r2/default/images/1783698268007-68f63b13-ab30-48db-acf5-e39f1189bce2.png",
     description:
       "Built for superior performance, the B.Nova Intelligent combines RO, UF, and UV purification with Active Copper Technology to provide comprehensive protection against impurities while preserving essential minerals.",
     features: ["RO + UF + UV", "Intelligent Purification", "Active Copper", "Alkaline Enhancement", "Smart Filtration", "Fully Automatic"],
@@ -56,7 +56,7 @@ export const products = [
     tagline: "Advanced Protection for Every Drop.",
     category: "ro",
     purification: "RO + UF + UV",
-    image: "/products/ro-plus.png",
+    image: "https://www.image2url.com/r2/default/images/1783698349230-c15bfe61-c1cc-4151-9e29-ef469313699b.png",
     description:
       "The B.Nova RO Plus features RO, UF, and UV purification combined with Active Copper and Alkaline Technology for dependable performance and healthier drinking water.",
     features: ["RO + UF + UV", "Multi-Stage Filtration", "Active Copper", "Reliable Performance", "Alkaline Water", "Automatic Operation"],
@@ -67,7 +67,7 @@ export const products = [
     tagline: "Open RO System for Reliable Everyday Purification.",
     category: "ro",
     purification: "RO + UF",
-    image: "/products/ro-open.png",
+    image: "https://www.image2url.com/r2/default/images/1783698416276-609d558c-9661-46dc-ba9a-c5b203381efe.png",
     description:
       "Designed with an open-body configuration, this purifier combines UF and RO purification with advanced membrane technology to provide dependable performance and effective purification.",
     features: ["RO + UF", "Open Design", "Mineral Retention", "High Performance Membrane", "Easy Maintenance", "Long Filter Life"],
@@ -78,7 +78,7 @@ export const products = [
     tagline: "Premium Purification with Smart TDS Control.",
     category: "ro",
     purification: "RO + UV + UF",
-    image: "/products/grand.png",
+    image: "https://www.image2url.com/r2/default/images/1783698479346-abb40d9b-5d3e-474f-82cf-07fb810a1864.png",
     description:
       "B.Nova Grand integrates RO, UV, UF, and Smart TDS Control to deliver balanced purification while maintaining essential minerals. Designed for superior everyday performance.",
     features: ["RO + UV + UF", "Smart TDS Control", "Active Copper", "Mineral Balance", "Fully Automatic", "High Performance"],
@@ -89,7 +89,7 @@ export const products = [
     tagline: "Seven-Stage Water Purification System.",
     category: "ro",
     purification: "7-Stage",
-    image: "/products/classic.png",
+    image: "https://www.image2url.com/r2/default/images/1783698986413-4cf0dcc6-c8c3-4048-bf62-0b145fe54eea.png",
     description:
       "B.Nova Classic delivers comprehensive seven-stage purification with Active Copper and Alkaline Technology, providing consistent water quality for everyday use.",
     features: ["Seven Stage Filtration", "Fully Automatic", "Active Copper", "Alkaline Water", "Low Maintenance", "Online Storage"],
@@ -100,7 +100,7 @@ export const products = [
     tagline: "Automatic Online Storage Water Purifier.",
     category: "ro",
     purification: "4-Stage",
-    image: "/products/online.png",
+    image: "https://www.image2url.com/r2/default/images/1783698593167-ca200bea-f47e-45b7-b8dd-efd70676b994.png",
     description:
       "Designed for convenient everyday use, B.Nova features a fully automatic four-stage purification system with Active Copper and Alkaline Technology for clean and refreshing drinking water.",
     features: ["Four Stage Filtration", "Alkaline Technology", "Active Copper", "Online Storage", "Fully Automatic", "Compact Design"],
@@ -111,7 +111,7 @@ export const products = [
     tagline: "Safe Drinking Water Without Electricity.",
     category: "nonelectric",
     purification: "Non-Electric",
-    image: "/products/silver-nano.png",
+    image: "https://www.image2url.com/r2/default/images/1783698533349-be609feb-c8d4-44d0-bdb7-672911b63d39.png",
     description:
       "Silver Nano is a non-electric storage water purifier featuring Silver Nano protection, Active Copper, and Alkaline Technology. Ideal for homes experiencing frequent power interruptions.",
     features: ["No Electricity Required", "Silver Nano Technology", "Active Copper", "Alkaline Water", "Self Maintained", "Low Maintenance"],
@@ -122,7 +122,7 @@ export const products = [
     tagline: "Efficient Purification Without Electricity.",
     category: "nonelectric",
     purification: "Non-Electric",
-    image: "/products/smart-nova.png",
+    image: "https://www.image2url.com/r2/default/images/1783698839520-e31507ab-9859-48b4-ac0a-3dc95d31d2f8.png",
     description:
       "Smart Nova provides advanced four-stage online filtration with Active Copper and Alkaline Technology while operating without electricity, making it ideal for energy-efficient households.",
     features: ["Four Stage Filtration", "No Electricity", "Active Copper", "Online Storage", "Alkaline Water", "Self Maintained"],
@@ -133,7 +133,7 @@ export const products = [
     tagline: "Simple. Reliable. Non-Electric Purification.",
     category: "nonelectric",
     purification: "Non-Electric",
-    image: "/products/gold.png",
+    image: "https://www.image2url.com/r2/default/images/1783699047680-28abe516-489f-40e0-98e7-0d9a80433782.png",
     description:
       "B.Nova Gold is a practical non-electric water purifier designed for reliable everyday purification with Active Copper and Alkaline Technology while requiring minimal maintenance.",
     features: ["No Electricity", "Self Maintained", "Active Copper", "Alkaline Water", "Low Maintenance", "Compact Design"],
@@ -144,7 +144,7 @@ export const products = [
     tagline: "Compact Two-Stage Filtration System.",
     category: "nonelectric",
     purification: "2-Stage",
-    image: "/products/akruti.png",
+    image: "https://www.image2url.com/r2/default/images/1783699110505-ee426f38-4d61-4dbf-8a07-47c73c815f2f.png",
     description:
       "The B.Nova Akruti offers efficient two-stage online filtration with Active Copper and Alkaline Technology in a compact, easy-to-maintain design.",
     features: ["Two Stage Filtration", "Self Maintained", "Active Copper", "Alkaline Water", "No Electricity", "Compact Body"],
@@ -155,7 +155,7 @@ export const products = [
     tagline: "Advanced Fluoride Removal Technology.",
     category: "uf",
     purification: "UF + Fluoride",
-    image: "/products/smart-plus.png",
+    image: "https://www.image2url.com/r2/default/images/1783698919747-1736edd0-c07e-406a-9bc7-8c8df25922fe.png",
     description:
       "Engineered for areas with excess fluoride, B.Nova Smart+ combines advanced UF membrane technology with Active Copper and Alkaline Enhancement to provide safer drinking water.",
     features: ["Fluoride Removal", "UF Membrane", "Active Copper", "Alkaline Technology", "Low Maintenance", "Self Maintained"],
