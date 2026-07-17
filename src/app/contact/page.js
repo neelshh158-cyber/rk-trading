@@ -89,9 +89,9 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-body text-xs uppercase tracking-wider text-navy/50">Address</p>
-                  <p className="font-body text-sm font-semibold text-navy">
-                    Bhandari Chawl, Beside Shetrunjay Tower, Behind Navyug College,
-                    Rander Road, Surat – 395009
+                 <p className="font-body text-sm font-semibold text-navy">
+                    R.K Trading, Bhandari Chawl, Beside Shetrunjay Tower, Behind
+                    Navyug College, Rander Road, Surat – 395009
                   </p>
                 </div>
               </motion.div>
