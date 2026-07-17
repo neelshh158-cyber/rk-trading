@@ -62,7 +62,7 @@ export default function Footer() {
               <Phone size={16} className="text-sky" /> Neel Shah — +91 95109 35509
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} className="text-sky" /> neelshh158@gmail.com
+           <Mail size={16} className="text-sky" /> info@rktrading.cc
             </li>
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0 text-sky" />

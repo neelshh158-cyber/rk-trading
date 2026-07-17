@@ -16,7 +16,7 @@ const fadeUp = {
 const contacts = [
   { icon: Phone, label: "Rajesh Shah", value: "+91 93745 03780", href: "tel:+919374503780" },
   { icon: Phone, label: "Neel Shah", value: "+91 95109 35509", href: "tel:+919510935509" },
-  { icon: Mail, label: "Email", value: "neelshh158@gmail.com", href: "mailto:neelshh158@gmail.com" },
+ { icon: Mail, label: "Email", value: "info@rktrading.cc", href: "mailto:info@rktrading.cc" },
 ];
 
 export default function ContactPage() {
