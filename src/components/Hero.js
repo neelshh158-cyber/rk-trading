@@ -99,7 +99,7 @@ export default function Hero() {
           ))}
 
           {/* main orb */}
-          <motion.div
+       <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -108,13 +108,14 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+              className="flex h-36 w-36 items-center justify-center rounded-full bg-white shadow-lg sm:h-44 sm:w-44"
             >
               <Image
                 src="/logo.png"
                 alt="R.K Trading"
                 width={150}
                 height={150}
-                className="object-contain"
+                className="h-28 w-28 object-contain sm:h-36 sm:w-36"
               />
             </motion.div>
           </motion.div>
